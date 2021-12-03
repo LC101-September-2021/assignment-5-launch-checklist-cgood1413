@@ -8,7 +8,7 @@ const init = () => {
     const cargoLevelInput = document.querySelector("input[name=cargoMass]");
     
     
-    //This is where I'm running into issues getting my files to cooperate. So far if I include everything under init() it works fine (more or less) but otherwise it's not much use
+    //This is where I'm running into issues getting my files to cooperate. So far if I include the functions under init() it works fine (more or less) but otherwise it's not much use
     form.addEventListener("submit", (event) => {
         
         event.preventDefault();
@@ -18,44 +18,39 @@ const init = () => {
 
     // const formSubmission = (document, list, pilot, copilot, fuelLevel, cargoLevel) => {
 
-    //     const valueObjs = [
-    //       pilotObj = {
-    //         value: pilot.value.trim(),
-    //         defaultType: "Not a Number",
-    //       },
-    //       copilotObj = {
-    //         value: copilot.value.trim(),
-    //         defaultType: "Not a Number",
-    //       },
-    //       fuelObj = {
-    //         value: fuelLevel.value.trim(),
-    //         defaultType: "Is a Number",
-    //       },
-    //       cargoObj = {
-    //         value: cargoLevel.value.trim(),
-    //         defaultType: "Is a Number",
-    //       },
-    //     ];
+    //     const pilotValue = pilot.value.trim();
+    //     const copilotValue = copilot.value.trim();
+    //     const fuelValue = fuelLevel.value.trim();
+    //     const cargoValue = cargoLevel.value.trim();
+    //     const defaultValues = ["Not a Number", "Not a Number", "Is a Number", "Is a Number"];
+    //     const values = [pilotValue, copilotValue, fuelValue, cargoValue];
+    //     const validatedValues = values.map(validateInput);
 
-    //     const validatedValues = validateInput(valueObjs);
-    //     if (validatedValues.includes("Empty")){
-    //         alert("All fields are required");
-    //     };
+    //     // const isCorrect = validatedValues.every((element, index) => {
+    //     //     element === defaultValues[index];
+    //     // })
         
+    //     if (validatedValues.includes("Empty")) {
+    //       alert("All fields are required.");
+    //     } else {
+    //         console.log(validatedValues[0] === defaultValues[0]);
+    //     }
+    
     // };
 
-    // const validateInput = (objArr) => {
+    // const validateInput = (str) => {
 
-    //     const mappedValues = objArr.map((obj) => {
-    //       if (obj.value === "") {
+    //     if (str === ""){
     //         return "Empty";
-    //       } else if (isNaN(obj.value)) {
+    //     } else if (isNaN(str)){
     //         return "Not a Number";
-    //       } else {
+    //     } else {
     //         return "Is a Number";
-    //       }
-    //     });
-    //     return mappedValues;
+    //     }
+
+    // };
+
+    // const isCorrectType = (inputArr, defaultArr) => {
 
     // };
     
