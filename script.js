@@ -16,43 +16,39 @@ const init = () => {
 
     });
 
-    // const formSubmission = (document, list, pilot, copilot, fuelLevel, cargoLevel) => {
+    const formSubmission = (document, list, pilot, copilot, fuelLevel, cargoLevel) => {
 
-    //     const pilotValue = pilot.value.trim();
-    //     const copilotValue = copilot.value.trim();
-    //     const fuelValue = fuelLevel.value.trim();
-    //     const cargoValue = cargoLevel.value.trim();
-    //     const defaultValues = ["Not a Number", "Not a Number", "Is a Number", "Is a Number"];
-    //     const values = [pilotValue, copilotValue, fuelValue, cargoValue];
-    //     const validatedValues = values.map(validateInput);
+        const pilotValue = pilot.value.trim();
+        const copilotValue = copilot.value.trim();
+        const fuelValue = fuelLevel.value.trim();
+        const cargoValue = cargoLevel.value.trim();
+        const defaultValues = ["Not a Number", "Not a Number", "Is a Number", "Is a Number"];
+        const values = [pilotValue, copilotValue, fuelValue, cargoValue];
+        const validatedValues = values.map(validateInput);
 
-    //     // const isCorrect = validatedValues.every((element, index) => {
-    //     //     element === defaultValues[index];
-    //     // })
-        
-    //     if (validatedValues.includes("Empty")) {
-    //       alert("All fields are required.");
-    //     } else {
-    //         console.log(validatedValues[0] === defaultValues[0]);
-    //     }
+        const isCorrect = validatedValues.every((element, index) => {
+            return element === defaultValues[index];
+        });
+
+        if (validatedValues.includes("Empty")) {
+            alert("All fields are required.");
+        } else if (!isCorrect) {
+            alert("Invalid input, please review responses and resubmit.");
+        }
     
-    // };
+    };
 
-    // const validateInput = (str) => {
+    const validateInput = (str) => {
 
-    //     if (str === ""){
-    //         return "Empty";
-    //     } else if (isNaN(str)){
-    //         return "Not a Number";
-    //     } else {
-    //         return "Is a Number";
-    //     }
+        if (str === ""){
+            return "Empty";
+        } else if (isNaN(str)){
+            return "Not a Number";
+        } else {
+            return "Is a Number";
+        }
 
-    // };
-
-    // const isCorrectType = (inputArr, defaultArr) => {
-
-    // };
+    };
     
     // let listedPlanets;
     // // Set listedPlanetsResponse equal to the value returned by calling myFetch()
