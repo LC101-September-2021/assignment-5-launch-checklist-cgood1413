@@ -20,7 +20,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     const copilotStatus = document.getElementById("copilotStatus");
     const fuelStatus = document.getElementById("fuelStatus");
     const cargoStatus = document.getElementById("cargoStatus");
-
+    
+    list.style.visibility = "hidden";
     pilotStatus.innerText = `${pilot} is ready for launch.`;
     copilotStatus.innerText = `${copilot} is ready for launch.`;
     if (fuelLevel < 10000) {
