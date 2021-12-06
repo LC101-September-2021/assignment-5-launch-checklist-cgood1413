@@ -21,22 +21,24 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     const fuelStatus = document.getElementById("fuelStatus");
     const cargoStatus = document.getElementById("cargoStatus");
 
-    list.style.visibility = "visible";
     pilotStatus.innerText = `${pilot} is ready for launch.`;
     copilotStatus.innerText = `${copilot} is ready for launch.`;
     if (fuelLevel < 10000) {
         launchStatus.style.color = "rgb(199, 37, 78)";
         launchStatus.innerText = "Shuttle Not Ready for Launch";
         fuelStatus.innerText = `Fuel level too low for launch`;
+        list.style.visibility = "visible";
     }
     if (cargoLevel > 10000) {
         launchStatus.style.color = "rgb(199, 37, 78)";
         launchStatus.innerText = "Shuttle Not Ready for Launch";
         cargoStatus.innerText = `Cargo mass too heavy for launch`;
+        list.style.visibility = "visible";
     }
     if (fuelLevel >= 10000 && cargoLevel <= 10000){
         launchStatus.style.color = "rgb(65, 159, 106)";
         launchStatus.innerText = "Shuttle is Ready for Launch";
+        list.style.visibility = "visible";
     }
 
 };
@@ -71,7 +73,7 @@ async function myFetch() {
 function pickPlanet(planets) {
 
     return planets[Math.floor(Math.random()*planets.length)];
-    
+
 }
 
 module.exports.addDestinationInfo = addDestinationInfo;
