@@ -12,7 +12,7 @@ function validateInput(str) {
     }
 
 };
-
+// A lot of hard-coding here, I'll need to find a way to do this more programatically.
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
     const launchStatus = document.getElementById("launchStatus");
@@ -32,6 +32,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     if (cargoLevel > 10000) {
         launchStatus.style.color = "rgb(199, 37, 78)";
         launchStatus.textContent = "Shuttle Not Ready for Launch";
+        fuelStatus.textContent = `Fuel level high enough for launch`;
         cargoStatus.textContent = `Cargo mass too heavy for launch`;
     }
     if (fuelLevel >= 10000 && cargoLevel <= 10000){
