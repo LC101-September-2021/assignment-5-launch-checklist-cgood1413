@@ -9,7 +9,7 @@ const init = () => {
     const fuelLevelInput = document.querySelector("input[name=fuelLevel]");
     const cargoLevelInput = document.querySelector("input[name=cargoMass]");
     
-    console.log(faultyList);
+    faultyList.style.visibility = "hidden";
 
     form.addEventListener("submit", (event) => {
 
