@@ -8,7 +8,7 @@ const init = () => {
     const copilotInput = document.querySelector("input[name=copilotName]");
     const fuelLevelInput = document.querySelector("input[name=fuelLevel]");
     const cargoLevelInput = document.querySelector("input[name=cargoMass]");
-    
+    // I had to include this for some reason to get my tests to pass :/ 
     faultyList.style.visibility = "hidden";
 
     form.addEventListener("submit", (event) => {
@@ -27,10 +27,8 @@ const init = () => {
         event.preventDefault();
         if (validatedValues.includes("Empty")) {
             alert("All fields are required.");
-            event.preventDefault();
         } else if (!isCorrect) {
             alert("Invalid input, please review responses and resubmit.");
-            event.preventDefault();
         } else {
             formSubmission(document, faultyList, pilotValue, copilotValue, fuelValue, cargoValue);
         }
